@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+  <mime-type type="application/ac2">
+    <comment>Banana Accounting file</comment>
+    <glob pattern="*.ac2"/>
+    <glob pattern="*.ac2.json"/>
+    <glob pattern="*.sba"/>
+    <glob pattern="*.sbaa"/>
+    <glob pattern="*.AC2"/>
+    <glob pattern="*.SBA"/>
+    <glob pattern="*.SBAA"/>
+    <icon name="banico"/>
+  </mime-type>
+  <mime-type type="application/x-banana-extension-ac2">
+    <comment>Banana Accounting file</comment>
+    <glob pattern="*.ac2"/>
+    <glob pattern="*.ac2.json"/>
+    <glob pattern="*.sba"/>
+    <glob pattern="*.sbaa"/>
+    <glob pattern="*.AC2"/>
+    <glob pattern="*.SBA"/>
+    <glob pattern="*.SBAA"/>
+    <icon name="banico"/>
+  </mime-type>
+  <mime-type type="application/vnd.banana-accounting">
+    <comment>Banana Accounting file</comment>
+    <glob pattern="*.ac2"/>
+    <glob pattern="*.ac2.json"/>
+    <glob pattern="*.sba"/>
+    <glob pattern="*.sbaa"/>
+    <glob pattern="*.AC2"/>
+    <glob pattern="*.SBA"/>
+    <glob pattern="*.SBAA"/>
+    <icon name="banico"/>
+  </mime-type>
+</mime-info>

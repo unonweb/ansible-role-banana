@@ -1,0 +1,48 @@
+---
+- name: banana role
+  tags:
+    - banana
+  block:
+
+  # install archive
+  - name: Install archive to /opt
+    become: true
+    ansible.builtin.unarchive:
+      src: "{{ banana_archive_src }}"
+      dest: /opt
+      owner: root
+      group: root
+      mode: u=rwx,g=rx,o=rx
+
+  # template desktop file
+  - name: Copy .desktop-file to /usr/share/applications/banana.desktop
+    become: true
+    notify: update-desktop-database
+    ansible.builtin.template:
+      src: "{{ banana_desktop_src }}"
+      dest: /usr/share/applications/banana.desktop
+      owner: root
+      group: root
+      mode: u=rw,g=r,o=r
+
+  # cp icon
+  - name: Copy icon to /usr/share/applications/jameica.desktop
+    become: true
+    notify: gtk-update-icon-cache
+    ansible.builtin.copy:
+      src: "{{ banana_icon_src }}"
+      dest: "{{ banana_icon_dst }}"
+      owner: root
+      group: root
+      mode: u=rw,g=r,o=r
+
+  # cp mime file
+  - name: Copy mime file /usr/share/applications/jameica.desktop
+    become: true
+    notify: update-mime-database
+    ansible.builtin.copy:
+      src: "{{ banana_mime_src }}"
+      dest: "{{ banana_mime_dst }}"
+      owner: root
+      group: root
+      mode: u=rw,g=r,o=r

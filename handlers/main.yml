@@ -1,0 +1,11 @@
+- name: update-desktop-database
+  become: true
+  ansible.builtin.command: update-desktop-database /usr/share/applications
+
+- name: gtk-update-icon-cache
+  become: true
+  ansible.builtin.command: gtk-update-icon-cache /usr/share/icons/hicolor
+
+- name: update-mime-database
+  become: true
+  ansible.builtin.command: update-mime-database /usr/share/mime

@@ -1,0 +1,8 @@
+---
+banana_archive_src: banana9.tar.xz
+banana_dst_run: /opt/banana9/start_banana9.sh
+banana_desktop_src: banana9.desktop.j2
+banana_icon_src: icon.svg
+banana_icon_dst: /usr/share/icons/hicolor/scalable/apps/banico.svg
+banana_mime_src: mime-ac2.xml
+banana_mime_dst: /usr/share/mime/packages/mime-ac2.xml
